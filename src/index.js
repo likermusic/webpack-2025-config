@@ -22,7 +22,7 @@ function clearAll() {
 
 function pushPlusMinus() {
   // если оператор ещё не выбран - меняем знак первого числа
-  if (operator == "") {
+  if (operator === "") {
     if (firstOperand !== "") {
       firstOperand = firstOperand * -1; // первое число
       display.textContent = firstOperand;
