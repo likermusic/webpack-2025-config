@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Noto Sans", Arial, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  font-size: 28px;
+}
+
+.calculator {
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.5);
+  border-right: 1.5px solid #5e5c5e;
+  border-bottom: 1.5px solid #5e5c5e;
+}
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 90px;
+  padding: 0 20px 10px;
+  font-size: 48px;
+  font-weight: 200;
+  background-color: #5e5c5e;
+  border-radius: 8px 7px 0 0;
+  text-align: right;
+  color: #fff;
+  position: relative;
+}
+
+.display::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #eb5757;
+  box-shadow: 24px 0 #e8b638, 48px 0 #34bf38;
+}
+
+/* .circle {
+    position: absolute;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.circle.red {
+    left: 15px;
+    background-color: #eb5757;
+}
+
+.circle.orange {
+    left: 40px;
+    background-color: #e8b638;
+}
+
+.circle.green {
+    left: 65px;
+    background-color: #34bf38;
+} */
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  font-family: "Open Sans", Arial, serif;
+  color: #f2f2eb;
+  width: calc(100% / 4);
+  font-size: 28px;
+  height: 60px;
+  border: none;
+  border-left: 1.5px solid #5e5c5e;
+  border-top: 1.5px solid #5e5c5e;
+  cursor: pointer;
+}
+
+button:last-child {
+  border-radius: 0 0 7px 0;
+  background-color: #f79320;
+}
+
+button:nth-child(4n) {
+  background-color: #f79320;
+}
+
+button:nth-child(-n + 3) {
+  background-color: #737273;
+}
+
+button:not(:nth-child(4n)):not(:nth-child(-n + 3)):not(:last-child) {
+  background-color: #969396;
+}
+
+button:hover {
+  filter: brightness(115%);
+}
+
+.zero {
+  flex-grow: 1;
+  border-radius: 0 0 0 8px;
+}
