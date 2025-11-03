@@ -24,7 +24,7 @@ function pushPlusMinus() {
   // если оператор ещё не выбран - меняем знак первого числа
   if (operator === "") {
     if (firstOperand !== "") {
-      firstOperand = firstOperand * -1; // первое число
+      firstOperand = firstOperand * -1;
       display.textContent = firstOperand;
     }
   } else {
